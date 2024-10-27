@@ -9,12 +9,14 @@ case "$1" in
         /usr/bin/module_load faulty
         /usr/bin/scull_load
         modprobe hello
+        aesdchar_load
         ;;
     stop)
         echo "ldd - unloading scull driver, faulty driver & removing modprobe"
         /usr/bin/module_unload faulty
         /usr/bin/scull_unload
         rmmod hello
+        aesdchar_unload
         ;;
     *)
         echo "Usage: $0 {start|stop}"

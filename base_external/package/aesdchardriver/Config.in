@@ -1,0 +1,4 @@
+config BR2_PACKAGE_AESDCHARDRIVER
+	bool "aesdchardriver"
+	help
+	  Supports building and installing the misc-modules and scull components into the root filesystem.
